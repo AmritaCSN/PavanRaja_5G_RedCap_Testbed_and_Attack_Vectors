@@ -1,22 +1,40 @@
-mcc: '999'          # Mobile Country Code value
-mnc: '70'           # Mobile Network Code value (2 or 3 digits)
+# ================================
+# gNB Configuration (RedCap)
+# ================================
 
-nci: '0x000000010'  # NR Cell Identity (36-bit)
-idLength: 32        # NR gNB ID length in bits [22...32]
-tac: 1              # Tracking Area Code
+mcc: '999'          # Mobile Country Code
+mnc: '70'           # Mobile Network Code
 
-linkIp: 127.0.0.201   # gNB's local IP address for Radio Link Simulation (Usually same with local IP)
-ngapIp: 127.0.0.200   # gNB's local IP address for N2 Interface (Usually same with local IP)
-gtpIp: 127.0.0.100    # gNB's local IP address for N3 Interface (Usually same with local IP)
+# NR Cell / gNB Identity
+nci: '0x000000020'  # Changed from gnb1 (must be UNIQUE)
+idLength: 32        # gNB ID length in bits
+tac: 1              # Tracking Area Code (must match AMF)
 
-# List of AMF address information
+# ================================
+# IP Configuration (SAME as gnb1)
+# ================================
+
+linkIp: 127.0.0.201   # Same radio link IP as gnb1
+ngapIp: 127.0.0.200   # Same N2 IP as gnb1
+gtpIp: 127.0.0.100    # Same N3 IP as gnb1
+
+# ================================
+# AMF Configuration
+# ================================
+
 amfConfigs:
   - address: 127.0.0.5
     port: 38412
 
-# List of supported S-NSSAIs by this gNB
-slices:
-  - sst: 1
+# ================================
+# Network Slicing
+# ================================
 
-# Indicates whether or not SCTP stream number errors should be ignored.
+slices:
+  - sst: 1            # Single slice (RedCap-friendly)
+
+# ================================
+# SCTP Handling
+# ================================
+
 ignoreStreamIds: true
