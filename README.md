@@ -1,4 +1,4 @@
-<h1 align="center"> 5G RedCap Security Testbed: Monitoring & Energy-Aware Attack Analysis </h1>
+<h1 align="center">5G RedCap TestBed and Attack Vectors </h1>
 <h3 align="center"> Physical & Power-Saving Exploits Simulation </h3>
 <h5 align="center"> Research Project - <a href="https://linkedin.com/in/p1r3x">Pavan Raja - AM.SC.P2CSN24014</a> (2025) </h5>
 
