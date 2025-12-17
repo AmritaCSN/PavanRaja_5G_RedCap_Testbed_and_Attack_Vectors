@@ -132,6 +132,37 @@ Since Open5GS does not natively expose Prometheus metrics, this project uses sys
 ![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
 
 <h2 id="results"> Results & Accomplishments</h2>
+<p>The simulation successfully established a 5G Standalone connection for the RedCap User Equipment.</p>
+
+<p><b>1. Core Network Activation:</b> All Open5GS services (AMF, SMF, UPF, etc.) were verified active via <code>systemctl</code>.</p>
+
+<p><b>2. gNodeB & UE Connection:</b> The custom <code>gnb2.yaml</code> and <code>ue2.yaml</code> configurations successfully established an SCTP connection and performed the NG Setup procedure.</p>
+<ul>
+    <li>Log Confirmation: <code>[ngap] SCTP connection established (127.0.0.5:38412)</code></li>
+    <li>Registration: <code>[nas] Initial Registration is successful</code></li>
+    <li>PDU Session: <code>[app] Connection setup for PDU session[1] is successful</code></li>
+</ul>
+
+<p><b>3. Packet Analysis:</b> Wireshark captures on the loopback interface (<code>lo</code>) confirmed the exchange of <code>NGSetupRequest</code>, <code>Authentication Request</code>, and <code>Security Mode Command</code> packets.</p>
+
+1.5G-gNB
+![5g-gNB](images/5g-gnb.png)
+
+2.log- NGAP and SCTP
+![log-NGAP and SCTP](images/sctp&ngap.png)
+
+3.5G-UE
+![5G-UE](images/5g-ue.png)
+
+4.log- RRC setup
+![log- RRC setup](images/rrc-setup.png)
+
+5.RedCap-gNB
+![RedCap-gNB](images/RedCap-gnb.png)
+
+6.RedCap-UE
+![RedCap-UE](images/RedCap-ue.png)
+
 
 **Validation:**
 * **Connectivity:** Successful 5G SA registration and PDU session establishment verified via NGAP/NAS logs.
