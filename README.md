@@ -41,7 +41,7 @@ The testbed is organized into four logical layers to bridge the gap between prot
 | **3. Monitoring** | **Prometheus & Node Exporter** | Collects time-series metrics (Port 9091) and host-level telemetry (Port 9100). |
 | **4. Analysis** | **Grafana** | Visualizes baseline behavior, attack impacts, and energy-aware mitigation comparisons (Port 3000). |
 
-![Project Architecture](images/project-arch.png)
+![Project Architecture](images/project-arch2.png)
 
 ![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
 
